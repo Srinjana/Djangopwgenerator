@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        padding: 20%;
+        padding-top: 5%;
+        margin: 0px;
+        background-color: rgb(235, 232, 85);
+        border: 60px solid rgba(236, 32, 32, 0.534);
+        border-top: 0px
+    }
+    h1{
+        font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    }
+    .jumbotron{
+        background-color: rgba(241, 58, 26, 0.308);
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">
+                <strong>
+                    Welcome to the Password Generator
+                </strong>
+            </h1>
+        </div>
+    </div>
+   
+   <div class="container ">
+    <form action="{%  url 'password' %}">
+        <div class="container">
+        <p>Enter the Number of Characters you Want</p>
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+            
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="length">
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                    <option value="11"> 11 </option>
+                    <option value="12" selected="selected"> 12 </option>
+                    <option value="13"> 13 </option>
+                    <option value="14"> 14 </option>
+                    <option value="15"> 15 </option>
+                    <option value="16"> 16 </option>
+                    <option value="17"> 17 </option>
+                    <option value="18"> 18 </option>
+                </select>
+            </div>
+        </div>
+        </div>
+<br>
+        <div class="container">
+        <p>More Options:</p>
+        
+        <input type="checkbox" name="uppercase" id=""> UpperCase Alphabets
+        <br>
+        <input type="checkbox" name="numbers" id=""> Numbers
+        <br>
+        <input type="checkbox" name="Special" id=""> Special Characters
+        <br>
+<br>
+        <input type="submit" value="Generate Password" class="btn btn-primary btn-lg">
+        <button type="button" class="btn btn-outline-success btn-lg"><a href="{% url 'about' %}">About the App</a></button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
